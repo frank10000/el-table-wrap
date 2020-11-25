@@ -1,72 +1,14 @@
-# el-table-wrap
+<template>
+  <ElTableWrap :data="tableData" :columns="columns" style="width: 100%">
+  </ElTableWrap>
+</template>
 
-## install
-```
-npm i el-table-wrap
-```
-
-## after use elementUi
-```javascript
-import elTableWrap from 'el-table-wrap' 
-Vue.use(elTableWrap);
-```
-
-### dependence
-
-- `Vue2.0+`    
-- `Element-UI2.0+`
-
-### demo 
-``` html
-<div id="app">
-  <h3>例1</h3>
-  <demo :data="tableData" :columns="columns" style="width: 100%"></demo>
-  <h3>例2</h3>
-  <demo stripe :data="tableData" :columns="columns" style="width: 100%"></demo>
-  <h3>例3</h3>
-  <demo border :data="tableData" :columns="columns" style="width: 100%"></demo>
-  <h3>例4</h3>
-  <demo
-    border
-    :data="tableData1"
-    :columns="columns1"
-    style="width: 100%"
-  ></demo>
-</div>
 <script>
-  new Vue({
-    components: {
-      demo: ElTableWrap,
-    },
-    data: {
+export default {
+  name: 'GroupingTableHeader',
+  data() {
+    return {
       columns: [
-        { prop: 'date', label: 'Date' },
-        { prop: 'name', label: 'Name' },
-        { prop: 'address', label: 'Address' },
-      ],
-      tableData: [
-        {
-          date: '2016-05-03',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles',
-        },
-        {
-          date: '2016-05-02',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles',
-        },
-        {
-          date: '2016-05-04',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles',
-        },
-        {
-          date: '2016-05-01',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles',
-        },
-      ],
-      columns1: [
         { prop: 'date', label: 'Date' },
         {
           label: 'Delivery Info',
@@ -84,7 +26,7 @@ Vue.use(elTableWrap);
           ],
         },
       ],
-      tableData1: [
+      tableData: [
         {
           date: '2016-05-03',
           name: 'Tom',
@@ -142,8 +84,7 @@ Vue.use(elTableWrap);
           zip: 'CA 90036',
         },
       ],
-    },
-  }).$mount('#app')
+    }
+  },
+}
 </script>
-```
-
