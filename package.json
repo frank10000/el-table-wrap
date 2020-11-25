@@ -1,8 +1,16 @@
 {
   "name": "el-table-wrap",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
   "main": "lib/ElTableWrap.common.js",
+  "keywords": [
+    "Vue",
+    "Element-UI",
+    "Element-Table",
+    "Element-Table-Wrap",
+    "EL-Table-Wrap"
+  ],
+  "repository": "frank10000/el-table-wrap",
+  "homepage": "https://github.com/frank10000/el-table-wrap",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
